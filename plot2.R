@@ -1,4 +1,5 @@
 ## Getting full data
+#read.csv
 data_full <- read.csv("./Data/household_power_consumption.txt", header=T, sep=';', na.strings="?", 
                       nrows=2075259, check.names=F, stringsAsFactors=F, comment.char="", quote='\"')
 data_full$Date <- as.Date(data_full$Date, format="%d/%m/%Y")
@@ -10,7 +11,6 @@ rm(data_full)#remove object with full list
 ## Converting dates
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
-
 
 # Plot
 # Plot 2
