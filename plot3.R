@@ -5,6 +5,7 @@ data_full$Date <- as.Date(data_full$Date, format="%d/%m/%Y")
 
 ## Get subset between specified  dates
 data <- subset(data_full, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
+# remove temporary dataset with full data
 rm(data_full)#remove object with full list
 
 ## Converting dates
